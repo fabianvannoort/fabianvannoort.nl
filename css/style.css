@@ -1,0 +1,53 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 40px auto;
+    max-width: 680px;
+    line-height: 1.6;
+    font-size: 18px;
+    background-color: #f7edd1;
+    color: #333;
+    padding: 0 20px;
+    display: block;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.2;
+    margin: 1.5em 0 0 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+p {
+    margin: 1em 0 0 0;
+    text-align: justify;
+}
+
+p.tagline {
+    font-style: italic;
+    text-align: center;
+}
+
+p.organisation, p.timeframe {
+    display: inline;
+    margin: 0.25em 0 0.5em 0;
+    font-style: italic;
+}
+
+p.organisation {
+    float:left;
+}
+
+p.timeframe {
+    float:right;
+}
+
+ul {
+    clear:both;
+    list-style-type: '– ';
+    padding-left:1em;
+}
