@@ -4,27 +4,41 @@
 
 body {
     margin: 40px auto;
-    max-width: 680px;
+    max-width: 600px;
     line-height: 1.6;
-    font-size: 18px;
+    font-size: 16px;
     background-color: #f7edd1;
     color: #333;
     padding: 0 20px;
     display: block;
+    font-family: "Literata", serif
 }
 
 h1, h2, h3, h4, h5, h6 {
     line-height: 1.2;
     margin: 1.5em 0 0 0;
+    font-family: "Helvetica Neue", "Arial", sans-serif;
 }
 
 h1 {
     text-align: center;
+    font-size: 3.5em;
+    margin: 0.5em 0 0 0;
+}
+
+h2 {
+    font-size: 2.2em;
+}
+
+h3 {
+    font-family: "Literata";
+    font-size: 1.1em;
 }
 
 p {
-    margin: 1em 0 0 0;
+    margin: 1.3em 0 0 0;
     text-align: justify;
+    font-weight: 400;
 }
 
 p.tagline {
@@ -42,7 +56,7 @@ img {
 p.organisation, p.timeframe {
     display: inline;
     margin: 0.25em 0 0.5em 0;
-    font-style: italic;
+    font-weight: 400;
 }
 
 p.organisation {
@@ -57,4 +71,5 @@ ul {
     clear:both;
     list-style-type: '– ';
     padding-left:1em;
+    font-weight:300;
 }
