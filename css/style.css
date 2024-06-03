@@ -75,21 +75,7 @@ ul {
     font-weight:300;
 }
 
-a {
-    color:inherit;
+a:link, a:visited, a:hover, a:active {
+    color:#333;
     text-decoration: underline;
-}
-
-.back {
-    height: 100px;
-    width: 100px;
-    position: absolute;
-    top: 20px;
-    left: 250px;  
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    border-style: dashed;
 }
