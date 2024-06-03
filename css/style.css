@@ -62,6 +62,7 @@ p.organisation, p.timeframe {
 
 p.organisation {
     float:left;
+    max-width: 50%;
 }
 
 p.timeframe {
