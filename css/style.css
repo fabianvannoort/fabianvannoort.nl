@@ -63,10 +63,12 @@ p.organisation, p.timeframe {
 p.organisation {
     float:left;
     max-width: 50%;
+    text-align:left;
 }
 
 p.timeframe {
     float:right;
+    text-align:right;
 }
 
 ul {
