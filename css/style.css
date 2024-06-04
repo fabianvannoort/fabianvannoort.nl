@@ -80,5 +80,36 @@ ul {
 
 a:link, a:visited, a:hover, a:active {
     color:#333;
+    text-decoration: none;
+}
+
+.navigation{
+    overflow: hidden;
+    border: #f7edd1;
+    background-color: rgb(98, 162, 100);
+}
+
+.navigationLeft, .navigationRight {
+    margin: 1em 0 .65em 0; 
+}
+
+.navigationLeft {
+    float:left;
+    text-align:left;
+}
+
+.navigationRight{
+    float:right;
+    text-align: right;
+}
+
+.navigation + p {
+    clear:both;
+}
+
+.navigation > .active{
     text-decoration: underline;
+}
+
+.navigation > :not(.active){
 }
