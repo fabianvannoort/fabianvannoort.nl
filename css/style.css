@@ -87,6 +87,7 @@ a:link, a:visited, a:hover, a:active {
     overflow: hidden;
     border: #f7edd1;
     background-color: rgb(98, 162, 100);
+    margin: 0 -20px 0 -20px;
 }
 
 .navigationLeft, .navigationRight {
@@ -96,11 +97,14 @@ a:link, a:visited, a:hover, a:active {
 .navigationLeft {
     float:left;
     text-align:left;
+    padding: 0 0 0 20px;
 }
 
 .navigationRight{
     float:right;
     text-align: right;
+    padding: 0 20px 0 0;
+
 }
 
 .navigation + p {
