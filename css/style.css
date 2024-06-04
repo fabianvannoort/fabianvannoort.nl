@@ -85,30 +85,32 @@ a:link, a:visited, a:hover, a:active {
 
 .navigation{
     overflow: hidden;
-    border: #f7edd1;
-    background-color: rgb(98, 162, 100);
-    margin: 0 -20px 0 -20px;
+    border-bottom: 10px solid #72874d;
+    background-color: #f7edd1;
+    margin: 0 -30px 0 -30px;
 }
 
 .navigationLeft, .navigationRight {
-    margin: 1em 0 .65em 0; 
+    margin: 1em 0 .32em 0; 
 }
 
 .navigationLeft {
     float:left;
     text-align:left;
-    padding: 0 0 0 20px;
+    padding: 0 0 0 30px;
 }
 
 .navigationRight{
     float:right;
     text-align: right;
-    padding: 0 20px 0 0;
+    padding: 0 30px 0 0;
 
 }
 
 .navigation + p {
     clear:both;
+    margin: 1.62em 0 0 0;
+
 }
 
 .navigation > .active{
