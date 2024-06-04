@@ -93,7 +93,7 @@ a:link, a:visited, a:hover, a:active {
 }
 
 .navigationLeft, .navigationRight {
-    margin: 1em 0 .32em 0; 
+    margin: 1em 0 1em 0; 
 }
 
 .navigationLeft {
@@ -109,17 +109,15 @@ a:link, a:visited, a:hover, a:active {
 
 }
 
-.navigation + h2 {
-    clear:both;
-    margin: 2.2em 0 0 0;
-
-}
-
 .navigation > .active{
     text-decoration: underline;
 }
 
 .navigation > h2{
     font-size: 1.5em;
-    padding-top: .5em;
+}
+
+.navigation + h2 {
+    clear:both;
+    margin: 1em 0 0 0;
 }
