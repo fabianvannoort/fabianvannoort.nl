@@ -68,6 +68,14 @@ p.organisation {
     text-align:left;
 }
 
+p.university {
+    display: inline;
+    margin: 0.25em 0 0.5em 0;
+    font-weight: 400;
+    float:left;
+    text-align:left;
+}
+
 p.timeframe {
     float:right;
     text-align:right;
