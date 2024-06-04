@@ -31,6 +31,8 @@ h2 {
     margin: 2em 0 0 0;
 }
 
+
+
 h3 {
     font-family: "Literata";
     font-size: 1.1em;
@@ -117,5 +119,7 @@ a:link, a:visited, a:hover, a:active {
     text-decoration: underline;
 }
 
-.navigation > :not(.active){
+.navigation > h2{
+    font-size: 1.5em;
+    padding-top: .5em;
 }
