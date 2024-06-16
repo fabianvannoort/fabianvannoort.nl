@@ -9,7 +9,8 @@
         
         <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏕️</text></svg>">
         <link rel="stylesheet" href="/css/style.css">
-        
+        <link rel="stylesheet" media="print" href="/css/print.css" />
+
         <link rel="preconnect" href="//fonts.googleapis.com">
         <link rel="preconnect" href="//fonts.gstatic.com" crossorigin>
         <link href="//fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&display=swap" rel="stylesheet">
@@ -17,7 +18,7 @@
 
     <body>
         <h1>Fabian van Noort</h1>
-        <p class="tagline">I research people and products to<br />make products work for people.</p>
+        <p class="tagline">I research people and products <br />to make products work for people.</p>
         <a href="https://fabianvannoort.nl/index.html"><img src="/img/fabian-small.jpg" alt="Fabian van Noort"></a>
         
         <div class="navigation">
@@ -30,81 +31,94 @@
     
 
         <h2>Work Experience</h2>
-        <h3>Senior UX Researcher</h3>
-        <div>
-            <p class="organisation">Valsplat</p>
-            <p class="timeframe">Apr 2022 — present</p>
+        <div class="workexperience" id="ValsplatSenior">
+            <h3>Senior UX Researcher</h3>
+            <div>
+                <p class="organisation">Valsplat</p>
+                <p class="timeframe">Apr 2022 — present</p>
+            </div>
+            <ul>
+                <li>Leading projects or embedded in teams to inform product decisions;</li>
+                <li>UXR for clients such as Albert Heijn, Action, DELA, PostNL and Sunweb;</li>
+                <li>Advocating for data-driven design by quantifying issues and their solutions.</li>
+            </ul>
         </div>
-        <ul>
-            <li>Leading projects or embedded in teams to inform product decisions;</li>
-            <li>UXR for clients such as Albert Heijn, Action, DELA, PostNL and Sunweb;</li>
-            <li>Advocating for data-driven design by quantifying issues and their solutions.</li>
-        </ul>
-        <h3>UX Researcher</h3>
-        <p class="organisation">Valsplat</p>
-        <p class="timeframe">Oct 2016 — Mar 2022</p>
-        <ul>
-            <li>Performing user tests and interviews;</li>
-            <li>Online quantitative studies and Google Analytics;</li>
-            <li>Working in a Holacracy (self-organizing teams, decentralized management).</li>
-        </ul>
-        <h3>UX Designer</h3>
-        <p class="organisation">Puurpxl</p>
-        <p class="timeframe">Feb 2015 — Sep 2016</p>
-        <ul>
-            <li>Discussing requirements for new websites;</li>
-            <li>Crafting new information structures;</li>
-            <li>Defining interactions on and between web pages.</li>
-        </ul>
-        <h3>Teaching Assistant</h3>
-        <p class="organisation">Utrecht University</p>
-        <p class="organisation"></p>
-        <p class="timeframe">May 2014</p>
-        <ul>
-            <li>Mentoring secondary school students in the U-Talent programme of the Freudenthal Institute for Science and Mathematics Education;</li>
-            <li>Guiding two groups through the design, planning, and execution of research projects concerning human performance on the traveling salesperson problem, and computer-assisted EEG data classification.</li>
-        </ul>
-        <h3>Cognitive Ergonomics Intern</h3>
-        <p class="organisation">vhp human performance</p>
-        <p class="timeframe">Dec 2013 — Feb 2014</p>
-        <ul>
-            <li>Researching methods for the analysis of smartphone app usage context;</li>
-            <li> Developing a custom tool for such an analysis;</li>
-            <li>Testing that tool during development of an app for motorists.</li>
-        </ul>
-        <h3>Design Research Intern</h3>
-        <p class="organisation">Puurpxl</p>
-        <p class="timeframe">Apr 2013 — Aug 2013</p>
-        <ul>
-            <li>Research project for the graduation of my Master's in Information Studies, on the Human Centered Multimedia track.</li>
-            <li>"How should Puurpxl design to empower people in supporting non-profit organizations on mobile systems?"</li>
-        </ul>
-        <h3>Teaching Assistant</h3>
-        <p class="organisation">University of Amsterdam</p>
-        <p class="timeframe">Jan 2013 — Apr 2013</p>
-        <ul>
-            <li>Assisting in creating assignments for the Interaction Design course;</li>
-            <li>Guiding students in execution of assignents;</li>
-            <li>Grading and giving feedback on assignment submissions.</li>
-        </ul>
-        
+        <div class="workexperience" id="ValsplatNOS">
+            <h3>UX Researcher</h3>
+            <p class="organisation">Valsplat</p>
+            <p class="timeframe">Oct 2016 — Mar 2022</p>
+            <ul>
+                <li>Performing user tests and interviews;</li>
+                <li>Online quantitative studies and Google Analytics;</li>
+                <li>Working in a Holacracy (self-organizing teams, decentralized management).</li>
+            </ul>
+        </div>
+        <div class="workexperience" id="Puurpxl">
+            <h3>UX Designer</h3>
+            <p class="organisation">Puurpxl</p>
+            <p class="timeframe">Feb 2015 — Sep 2016</p>
+            <ul>
+                <li>Discussing requirements for new websites;</li>
+                <li>Crafting new information structures;</li>
+                <li>Defining interactions on and between web pages.</li>
+            </ul>
+        </div>
+        <div class="workexperience" id="Freudenthal">
+            <h3>Teaching Assistant</h3>
+            <p class="organisation">Utrecht University</p>
+            <p class="organisation"></p>
+            <p class="timeframe">May 2014</p>
+            <ul>
+                <li>Mentoring secondary school students in the U-Talent programme of the Freudenthal Institute for Science and Mathematics Education;</li>
+                <li>Guiding two groups through the design, planning, and execution of research projects concerning human performance on the traveling salesperson problem, and computer-assisted EEG data classification.</li>
+            </ul>
+        </div>
+        <div class="workexperience" id="vhp">
+            <h3>Cognitive Ergonomics Intern</h3>
+            <p class="organisation">vhp human performance</p>
+            <p class="timeframe">Dec 2013 — Feb 2014</p>
+            <ul>
+                <li>Researching methods for the analysis of smartphone app usage context;</li>
+                <li> Developing a custom tool for such an analysis;</li>
+                <li>Testing that tool during development of an app for motorists.</li>
+            </ul>
+        </div>
+        <div class="workexperience" id="PuurpxlInternship">
+            <h3>Design Research Intern</h3>
+            <p class="organisation">Puurpxl</p>
+            <p class="timeframe">Apr 2013 — Aug 2013</p>
+            <ul>
+                <li>Research project for the graduation of my Master's in Information Studies, on the Human Centered Multimedia track.</li>
+                <li>"How should Puurpxl design to empower people in supporting non-profit organizations on mobile systems?"</li>
+            </ul>
+        </div>
+        <div class="workexperience" id="UvATA">
+            <h3>Teaching Assistant</h3>
+            <p class="organisation">University of Amsterdam</p>
+            <p class="timeframe">Jan 2013 — Apr 2013</p>
+            <ul>
+                <li>Assisting in creating assignments for the Interaction Design course;</li>
+                <li>Guiding students in execution of assignents;</li>
+                <li>Grading and giving feedback on assignment submissions.</li>
+            </ul>
+        </div>    
         <h2>Education</h2>
         <h3>MSc. Applied Cognitive Psychology, <em>cum laude</em></h3>
         <p class="university">Utrecht University</p>
-        <ul>
+        <ul class="educationcontent">
             <li>Thesis: "Effect of running on throughput in pointing tasks: a Fitts' law experiment"</li>
         </ul>
 
         <h3>MSc. Information Studies</h3>
         <p class="university">University of Amsterdam</p>
-        <ul>
+        <ul class="educationcontent">
             <li>Track: Human Centered Multimedia</li>
             <li>Thesis: A framework for donating via mobile devices</li>
         </ul>
 
         <h3>BSc. Information Sciences</h3>
         <p class="university">Utrecht University</p>
-        <ul>
+        <ul class="educationcontent">
             <li>Minor: Cognitive Psychology</li>
             <li>Thesis: Heuristics for expert evaluation of Android and iOS apps</li>
         </ul>
