@@ -4,7 +4,7 @@
 
 body {
     margin: 40px auto;
-    max-width: 600px;
+    max-width: 620px;
     line-height: 1.6;
     font-size: 16px;
     background-color: #fff8dc;
@@ -42,6 +42,13 @@ p {
     font-weight: 400;
 }
 
+hr {
+    border: 0;
+    border-bottom: 10px solid #72874d;
+    width: calc(100% + 40px);
+    margin: 0 -20px;
+}
+
 p.tagline {
     font-style: italic;
     text-align: center;
@@ -49,8 +56,8 @@ p.tagline {
 
 img { 
     display: block;
-    width:150px;
-    height:150px;
+    width: 150px;
+    height: 150px;
     margin: 2em auto;
 }
 
@@ -61,30 +68,30 @@ p.organisation, p.timeframe {
 }
 
 p.organisation {
-    float:left;
+    float: left;
     max-width: 50%;
-    text-align:left;
+    text-align: left;
 }
 
 p.university {
     display: inline;
     margin: 0.25em 0 0.5em 0;
     font-weight: 400;
-    float:left;
-    text-align:left;
+    float: left;
+    text-align: left;
     max-width: 90%;
 }
 
 p.timeframe {
-    float:right;
-    text-align:right;
+    float: right;
+    text-align: right;
 }
 
 ul {
-    clear:both;
+    clear: both;
     list-style-type: '– ';
-    padding-left:0.70em;
-    font-weight:300;
+    padding-left: 0.70em;
+    font-weight: 300;
 }
 
 a:link, a:visited, a:hover, a:active {
@@ -92,10 +99,8 @@ a:link, a:visited, a:hover, a:active {
     text-decoration: none;
 }
 
-.navigation{
+.navigation {
     overflow: hidden;
-    border-bottom: 10px solid #72874d;
-    margin: 0 -30px 0 -30px;
 }
 
 .navigationLeft, .navigationRight {
@@ -103,26 +108,35 @@ a:link, a:visited, a:hover, a:active {
 }
 
 .navigationLeft {
-    float:left;
-    text-align:left;
-    padding: 0 0 0 30px;
+    float: left;
+    text-align: left;
 }
 
-.navigationRight{
+.navigationRight {
     float:right;
     text-align: right;
-    padding: 0 30px 0 0;
 }
 
-.navigation > .active{
+.navigation > .active {
     text-decoration: underline;
 }
 
-.navigation > h2{
+.navigation > h2 {
     font-size: 1.5em;
 }
 
 .navigation + h2 {
     clear:both;
     margin: 1em 0 0 0;
-}z
+}
+
+@media screen and (min-width: 620px) {
+    body {
+        padding: 0 30px 42em 30px;
+    }
+
+    hr {
+        width: calc(100% + 60px);
+        margin: 0 -30px;
+    }
+}
