@@ -34,7 +34,7 @@ h1 {
 
 h2 {
     font-size: 2em;
-    margin: 2em 0 0 0;
+    margin: 1.2em 0 0 0;
 }
 
 h3 {
@@ -42,7 +42,7 @@ h3 {
     font-size: 1.1em;
     clear:left;
     margin-top:0px;
-    padding-top: 1.5em;
+    padding-top: 0.75em;
 }
 
 p {
@@ -51,11 +51,16 @@ p {
     font-weight: 400;
 }
 
+ul {
+    margin-top: 0.5em;
+}
+
 p.tagline {
-    clear:left;
-    float:left;
+    clear: left;
+    float: left;
     font-style: italic;
     text-align: left;
+    padding-top: 4.8em;
 }
 
 img { 
@@ -109,7 +114,6 @@ a:link, a:visited, a:hover, a:active {
 .navigation{
     clear: both;
     overflow: hidden;
-    border-bottom: 10px solid #72874d;
     margin: 0 -30px 0 -30px;
 }
 
@@ -152,4 +156,17 @@ div#ValsplatSenior,
 div#ValsplatNOS,
 div#Puurpxl {
     display: block;
+}
+
+/* Hide contact section, in favor of contact details at top of page. */
+#contact {
+    display: none;
+}
+
+.contactDetails {
+    clear: right;
+    float: right;
+    display: block;
+    text-align: right;
+    padding-bottom: 1em;
 }

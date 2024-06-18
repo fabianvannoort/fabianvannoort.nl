@@ -130,6 +130,10 @@ a:link, a:visited, a:hover, a:active {
     margin: 1em 0 0 0;
 }
 
+.contactDetails {
+    display: none;
+}
+
 @media screen and (min-width: 620px) {
     body {
         padding: 0 30px 42em 30px;
