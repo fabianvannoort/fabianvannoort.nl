@@ -38,7 +38,6 @@ h3 {
 
 p {
     margin: 1.3em 0 0 0;
-    text-align: justify;
     font-weight: 400;
 }
 
@@ -92,6 +91,7 @@ ul {
     list-style-type: '– ';
     padding-left: 0.70em;
     font-weight: 300;
+    text-align: left;
 }
 
 a:link, a:visited, a:hover, a:active {
@@ -126,7 +126,7 @@ a:link, a:visited, a:hover, a:active {
 }
 
 .navigation + h2 {
-    clear:both;
+    clear: both;
     margin: 1em 0 0 0;
 }
 
