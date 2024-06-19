@@ -53,6 +53,18 @@ p.tagline {
     text-align: center;
 }
 
+p.summary {
+    margin-top: 0.8em;
+}
+
+#tagline_default {
+    display: block; 
+}
+
+#tagline_print {
+    display:none;
+}
+
 img { 
     display: block;
     width: 150px;
