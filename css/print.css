@@ -24,8 +24,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    float:left;
-    display:inline !important;
+    float: left;
+    display: inline !important;
     text-align: left;
     font-size: 4.5em;
     margin: 0.5em 0 0 0;
@@ -40,8 +40,8 @@ h2 {
 h3 {
     font-family: "Literata";
     font-size: 1.1em;
-    clear:left;
-    margin-top:0px;
+    clear: left;
+    margin-top: 0px;
     padding-top: 0.75em;
 }
 
