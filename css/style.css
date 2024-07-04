@@ -146,6 +146,22 @@ a:link, a:visited, a:hover, a:active {
     display: none;
 }
 
+img.bird{
+    /* border: 2px solid #555; */
+    display:block;
+    
+    max-height: 335px;
+    max-width: 335px;
+    width: auto;
+
+    margin: 2em auto 0.5em auto;
+}
+
+p.caption {
+    margin: 0;
+    text-align: center;
+}
+
 @media screen and (min-width: 620px) {
     body {
         padding: 0 30px 42em 30px;
