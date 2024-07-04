@@ -75,7 +75,7 @@ p.tagline {
     display: block;
 }
 
-img { 
+.profile_picture { 
     /* display: none; */
     float:right;
     width:75px;

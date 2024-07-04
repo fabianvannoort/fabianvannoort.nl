@@ -65,7 +65,7 @@ p.summary {
     display:none;
 }
 
-img { 
+.profile_picture { 
     display: block;
     width: 150px;
     height: 150px;
