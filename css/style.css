@@ -157,6 +157,20 @@ img.bird{
     margin: 2em auto 0.5em auto;
 }
 
+.life_list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around safe;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 1em 1em;
+
+}
+
+div.bird {
+    max-width: 90px;
+}
 p.caption {
     margin: 0;
     text-align: center;
