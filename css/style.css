@@ -146,31 +146,6 @@ a:link, a:visited, a:hover, a:active {
     display: none;
 }
 
-img.bird{
-    /* border: 2px solid #555; */
-    display:block;
-    
-    max-height: 335px;
-    max-width: 335px;
-    width: auto;
-
-    margin: 2em auto 0.5em auto;
-}
-
-.life_list {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around safe;
-    align-items: flex-start;
-    align-content: flex-start;
-    gap: 1em 1em;
-
-}
-
-div.bird {
-    max-width: 90px;
-}
 p.caption {
     margin: 0;
     text-align: center;
