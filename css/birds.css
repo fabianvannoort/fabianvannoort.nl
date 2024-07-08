@@ -1,22 +1,8 @@
-div.bird {
-    max-width: 90px;
-}
-
-img.bird{
-    /* border: 2px solid #555; */
-    display: block;
-    max-height: 335px;
-    max-width: 335px;
-    width: auto;
-
-    margin: 2em auto 0.5em auto;
-}
-
 .life_list {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: flex-start;
     align-content: flex-start;
     padding: 0px;
@@ -24,10 +10,10 @@ img.bird{
     list-style-type: '';
 }
 
-.birdListItem {
-    width: 125px;
-    height: 150px;
-
+li.bird {
+    width: 158px;
+    height: 237px;
+    flex: 1 1 auto;
+    /* Hoe de laatste niet de hele line te laten vullen? */
 }
 
-/* Hoe altijd de breedte uitvullen met blokjes? */
