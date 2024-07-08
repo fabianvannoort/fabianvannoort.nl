@@ -4,8 +4,7 @@ div.bird {
 
 img.bird{
     /* border: 2px solid #555; */
-    display:block;
-    
+    display: block;
     max-height: 335px;
     max-width: 335px;
     width: auto;
@@ -17,9 +16,18 @@ img.bird{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around safe;
+    justify-content: start;
     align-items: flex-start;
     align-content: flex-start;
+    padding: 0px;
     gap: 1em 1em;
+    list-style-type: '';
+}
+
+.birdListItem {
+    width: 125px;
+    height: 150px;
 
 }
+
+/* Hoe altijd de breedte uitvullen met blokjes? */
