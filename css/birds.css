@@ -11,8 +11,8 @@
 }
 
 li.bird {
-    width: 158px;
-    height: 237px;
+    width: 180px;
+    height: 270px;
     flex: 1 1 auto;
     /* Hoe de laatste niet de hele line te laten vullen? */
 }
