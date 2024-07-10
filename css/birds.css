@@ -2,7 +2,7 @@ body {
     padding: 0 20px 20px 20px;
 }
 
-.life_list {
+.lifeList {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -15,21 +15,34 @@ body {
 }
 
 li.bird {
-
     width: 200px;
     height: 300px;
     flex: 1 1 auto;
 }
 
-p.caption {
-    font-style: italic;
-    /* background-color: rgb(114 135 77 / 30%); */
-    background-color: rgb(255 248 220 / 60%);  
-    /* background-color: rgb(255 255 255 / 80%); */
-
+.birdInfo {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-content: space-between;
+    padding: 0px;
+    gap: 0px;
 }
 
-.cc {
+p.birdCaption {
+    margin: 0;
+    flex: 0 0 auto;
+    width: 100%;
+    background-color: rgb(255 248 220 / 75%);
+    text-shadow: 1px 1px 3px rgb(255 248 220 / 100%);
+    font-style: italic;
+    text-align: center;
+}
+
+.creativecommons {
     font-weight:100;
     padding-top: 2em;
     text-align: center;
