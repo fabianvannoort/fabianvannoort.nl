@@ -14,25 +14,6 @@
         <link rel="preconnect" href="//fonts.googleapis.com">
         <link rel="preconnect" href="//fonts.gstatic.com" crossorigin>
         <link href="//fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&display=swap" rel="stylesheet">
-        
-        <script>
-            function showLightbox (filename) {
-                const lightbox = document.getElementById("lightbox");
-                const lightboxImage = document.getElementById("lightboxImage");
-
-                lightboxImage.src='/img/birds/'+filename;
-
-                lightbox.classList.remove("lightboxHidden");
-                lightbox.classList.add("lightboxShown");
-            }
-
-            function hideLightbox () {
-                const lightbox = document.getElementById("lightbox");
-
-                lightbox.classList.remove("lightboxShown");
-                lightbox.classList.add("lightboxHidden");
-            }
-        </script>
    
     </head>
 
@@ -758,9 +739,5 @@
 
         <p class="creativecommons"><a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" style="text-decoration: underline;">CC BY-NC-ND 4.0</a></p>
 
-        <div id="lightbox" class="lightbox lightboxHidden">
-            <img id="lightboxImage" src="">
-            <p onClick=hideLightbox()>CLOSE</p>
-        </div>
     </body>
 </html>
