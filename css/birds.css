@@ -49,3 +49,7 @@ p.birdCaption {
     text-align: center;
 }
 
+@media screen and (min-width: 620px) {
+    body {
+        padding: 0 30px 30px 30px;
+    }
