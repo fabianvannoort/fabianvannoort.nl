@@ -33,7 +33,7 @@ li.bird {
     gap: 0px;
 }
 
-p.birdCaption {
+p.birdCaption, p.birdNumber {
     margin: 0;
     flex: 0 0 auto;
     width: 100%;
@@ -41,6 +41,19 @@ p.birdCaption {
     text-shadow: 1px 1px 3px rgb(255 248 220 / 100%);
     font-style: italic;
     text-align: center;
+}
+
+p.birdNumber {
+    margin: 0;
+    padding: 0 .5em 0 0;
+    flex: 0 0 auto;
+    width: 100%;
+    background-color: rgb(255 248 220 / 0%);
+    text-shadow: 1px 1px 3px rgb(255 248 220 / 50%);
+    font-size: xx-large;
+    font-style: italic;
+    text-align: right;
+    opacity: 0.1;
 }
 
 .creativecommons {
