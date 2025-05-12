@@ -14,7 +14,29 @@
         <link rel="preconnect" href="//fonts.googleapis.com">
         <link rel="preconnect" href="//fonts.gstatic.com" crossorigin>
         <link href="//fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&display=swap" rel="stylesheet">
-   
+        
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                
+                // Make a list of all elements with class "bird".
+                const birds = document.querySelectorAll(".bird");
+                
+                // Iterate over this list of elements, passing down the element object as 'bird' and its index.
+                birds.forEach((bird, index) => {
+
+                    // The first bird should show "001", so we take the zero-starting index, add 1, with padding, as a string.
+                    const birdNumber = String(index + 1).padStart(3, '0');
+
+                    // Query the 'bird' object (the <li> in this case) for an object with class "birdNumber" (the <p> in this case). 
+                    const numberElement = bird.querySelector(".birdNumber");
+        
+                    // If an element with class "birdNumber" was found in the 'bird' object, set its content to the value of birdNumber.
+                    if (numberElement) {
+                        numberElement.textContent = birdNumber;
+                    }
+                });
+            });
+        </script>
     </head>
 
     <body>
