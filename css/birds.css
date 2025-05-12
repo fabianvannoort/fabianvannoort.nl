@@ -30,10 +30,11 @@ li.bird {
     align-items: flex-start;
     align-content: space-between;
     padding: 0px;
+    position: relative;
     gap: 0px;
 }
 
-p.birdCaption {
+p.birdCaption, p.birdNumber {
     margin: 0;
     flex: 0 0 auto;
     width: 100%;
@@ -41,30 +42,29 @@ p.birdCaption {
     text-shadow: 1px 1px 3px rgb(255 248 220 / 100%);
     font-style: italic;
     text-align: center;
+    padding: 0 0 .15em 0;
+}
+
+p.birdNumber {
+    font-size: 12px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent;
+    text-shadow: 1px 1px 3px rgb(255 248 220 / 0%);
+    text-align: left;
+    padding-left: .5em;
+    padding-top: .45em;
+    font-weight: 400;
+    /* font-family: "Helvetica Neue", "Arial", sans-serif; */
+    /* font-style: normal; */
 }
 
 .creativecommons {
     font-weight:100;
     padding-top: 2em;
     text-align: center;
-}
-
-
-.lightbox {
-    position: absolute;
-    top: 5px;
-    left: 5px; 
-    width: 200px;
-    height: 200px;
-    background-color: white;
-}
-
-.lightboxHidden {
-    display: none;
-}
-
-.lightboxShown {
-    display: block;
 }
 
 @media screen and (min-width: 620px) {
