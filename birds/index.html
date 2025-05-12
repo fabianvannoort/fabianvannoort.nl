@@ -14,6 +14,30 @@
         <link rel="preconnect" href="//fonts.googleapis.com">
         <link rel="preconnect" href="//fonts.gstatic.com" crossorigin>
         <link href="//fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&display=swap" rel="stylesheet">
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+                
+                // Make a list of all elements with class "bird".
+                const birds = document.querySelectorAll(".bird");
+                
+                // Iterate over this list of elements, passing down the element object as 'bird' and its index.
+                birds.forEach((bird, index) => {
+                    
+                    // The first three chars of the background-image filename is what we need.
+                    let myURL = window.location.protocol + "//" + window.location.host;
+                    let birdNumber = getComputedStyle(bird).getPropertyValue('background-image').slice(myURL.length+16, myURL.length+16+3);
+
+                    // We will want to write the birdNumber to the numberElement's contents. To do so, we must find 
+                    // where to put the birdNumber for this bird, by doing a query over the 'bird' object (the <li> 
+                    // in this case) for an object with class "birdNumber" (the <p> in this case). 
+                    const numberElement = bird.querySelector(".birdNumber");
+
+                    numberElement.textContent = birdNumber;
+                    let imageURL = getComputedStyle(bird).getPropertyValue('background-image');
+                });
+            });
+    </script>
+    
     </head>
 
     <body>
@@ -27,7 +51,7 @@
         <hr />
         <h2>Life list</h2>
         <ul class="lifeList">
-            <li class="bird" style="background: url(/img/birds/Aalscholver.jpg) no-repeat 25%; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/025-Aalscholver.jpg) no-repeat 25%; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Aalscholver</p>
@@ -35,7 +59,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Baardman.jpg) no-repeat left; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/079-Baardman.jpg) no-repeat left; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Baardman</p>
@@ -43,7 +67,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Barmsijs.jpg) no-repeat left; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/107-Barmsijs.jpg) no-repeat left; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Barmsijs</p>
@@ -51,7 +75,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Bergeend.jpg) no-repeat center; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/001-Bergeend.jpg) no-repeat center; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Bergeend</p>
@@ -59,7 +83,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Blauwborst.jpg) no-repeat center; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/091-Blauwborst.jpg) no-repeat center; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Blauwborst</p>
@@ -67,7 +91,7 @@
                 </div>
             </li>
             
-            <li class="bird" style="background: url(/img/birds/Blauwe%20Kiekendief.jpg) no-repeat center; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/009-Blauwe%20Kiekendief.jpg) no-repeat center; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Blauwe Kiekendief</p>
@@ -75,7 +99,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Blauwe%20Reiger.jpg) no-repeat center 40%; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/039-Blauwe%20Reiger.jpg) no-repeat center 40%; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Blauwe Reiger</p>
@@ -83,7 +107,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Boerenzwaluw.jpg) no-repeat center; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/078-Boerenzwaluw.jpg) no-repeat center; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Boerenzwaluw</p>
@@ -91,7 +115,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Bonte%20Vliegenvanger.jpg) no-repeat center; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/063-Bonte%20Vliegenvanger.jpg) no-repeat center; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Bonte Vliegenvanger</p>
@@ -99,7 +123,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Boomklever.jpg) no-repeat 10%; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/070-Boomklever.jpg) no-repeat 10%; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Boomklever</p>
@@ -107,7 +131,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Boomkruiper.jpg) no-repeat center; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/060-Boomkruiper.jpg) no-repeat center; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Boomkruiper</p>
@@ -115,7 +139,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Boomleeuwerik.jpg) no-repeat center; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/023-Boomleeuwerik.jpg) no-repeat center; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Boomleeuwerik</p>
@@ -123,7 +147,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Boompieper.jpg) no-repeat center; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/084-Boompieper.jpg) no-repeat center; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Boompieper</p>
@@ -131,7 +155,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Boomvalk.jpg) no-repeat 50% 30%; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/092-Boomvalk.jpg) no-repeat 50% 30%; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Boomvalk</p>
@@ -139,7 +163,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Bruine%20Kiekendief.jpg) no-repeat center; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/090-Bruine\ Kiekendief.jpg) no-repeat center; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Bruine Kiekendief</p>
@@ -147,7 +171,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Buizerd.jpg) no-repeat 80%; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/027-Buizerd.jpg) no-repeat 80%; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Buizerd</p>
@@ -155,7 +179,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Dodaars.jpg) no-repeat 30%; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/094-Dodaars.jpg) no-repeat 30%; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Dodaars</p>
@@ -163,7 +187,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Drieteenstrandloper.jpg) no-repeat center; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/097-Drieteenstrandloper.jpg) no-repeat center; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Drieteenstrandloper</p>
@@ -171,7 +195,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Ekster.jpg) no-repeat center; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/046-Ekster.jpg) no-repeat center; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Ekster</p>
@@ -179,7 +203,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Fazant.jpg) no-repeat center; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/032-Fazant.jpg) no-repeat center; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Fazant</p>
@@ -187,7 +211,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Fitis.jpg) no-repeat center; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/082-Fitis.jpg) no-repeat center; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Fitis</p>
@@ -195,7 +219,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Fuut.jpg) no-repeat center; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/006-Fuut.jpg) no-repeat center; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Fuut</p>
@@ -203,7 +227,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Gaai.jpg) no-repeat 20% top; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/038-Gaai.jpg) no-repeat 20% top; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Gaai</p>
@@ -211,7 +235,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Gierzwaluw.jpg) no-repeat center; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/081-Gierzwaluw.jpg) no-repeat center; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Gierzwaluw</p>
@@ -220,7 +244,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Glanskop.jpg) no-repeat center; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/012-Glanskop.jpg) no-repeat center; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Glanskop</p>
@@ -228,7 +252,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Goudhaan.jpg) no-repeat center; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/111-Goudhaan.jpg) no-repeat center; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Goudhaan</p>
@@ -236,7 +260,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Graspieper.jpg) no-repeat center; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/030-Graspieper.jpg) no-repeat center; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Graspieper</p>
@@ -244,7 +268,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Grauwe%20Gans.jpg) no-repeat center; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/048-Grauwe%20Gans.jpg) no-repeat center; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Grauwe Gans</p>
@@ -252,7 +276,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Grauwe%20Vliegenvanger.jpg) no-repeat center; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/022-Grauwe%20Vliegenvanger.jpg) no-repeat center; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Grauwe Vliegenvanger</p>
@@ -260,7 +284,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Grote%20Bonte%20Specht.jpg) no-repeat center; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/043-Grote%20Bonte%20Specht.jpg) no-repeat center; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Grote Bonte Specht</p>
@@ -268,7 +292,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Grote%20Canadese%20Gans.jpg) no-repeat center; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/019-Grote%20Canadese%20Gans.jpg) no-repeat center; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Grote Canadese Gans</p>
@@ -276,7 +300,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Grote%20Gele%20Kwikstaart.jpg) no-repeat center; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/105-Grote\ Gele\ Kwikstaart.jpg) no-repeat center; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Grote Gele Kwikstraat</p>
@@ -284,7 +308,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Grote%20Lijster.jpg) no-repeat center; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/037-Grote%20Lijster.jpg) no-repeat center; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Grote Lijster</p>
@@ -292,7 +316,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Grote%20Stern.jpg) no-repeat 40%; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/031-Grote%20Stern.jpg) no-repeat 40%; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Grote Stern</p>
@@ -300,7 +324,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Grote%20Zaagbek.jpg) no-repeat 75%; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/104-Grote\ Zaagbek.jpg) no-repeat 75%; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Grote Zaagbek</p>
@@ -308,7 +332,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Grote%20Zilverreiger.jpg) no-repeat 20%; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/077-Grote\ Zilverreiger.jpg) no-repeat 20%; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Grote Zilverreiger</p>
@@ -316,7 +340,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Grutto.jpg) no-repeat center; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/088-Grutto.jpg) no-repeat center; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Grutto</p>
@@ -324,7 +348,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Halsbandparkiet.jpg) no-repeat center; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/058-Halsbandparkiet.jpg) no-repeat center; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Halsbandparkiet</p>
@@ -332,7 +356,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Heggenmus.jpg) no-repeat 25%; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/051-Heggenmus.jpg) no-repeat 25%; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Heggenmus</p>
@@ -340,7 +364,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Houtduif.jpg) no-repeat 70%; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/059-Houtduif.jpg) no-repeat 70%; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Houtduif</p>
@@ -348,7 +372,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Huismus.jpg) no-repeat center; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/034-Huismus.jpg) no-repeat center; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Huismus</p>
@@ -356,7 +380,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Huiszwaluw.jpg) no-repeat center; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/017-Huiszwaluw.jpg) no-repeat center; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Huiszwaluw</p>
@@ -364,7 +388,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/IJsvogel.jpg) no-repeat center; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/055-IJsvogel.jpg) no-repeat center; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">IJsvogel</p>
@@ -372,7 +396,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Kauw.jpg) no-repeat 20%; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/087-Kauw.jpg) no-repeat 20%; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Kauw</p>
@@ -380,7 +404,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Kievit.jpg) no-repeat 70%; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/044-Kievit.jpg) no-repeat 70%; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Kievit</p>
@@ -388,7 +412,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Kleine%20Karekiet.jpg) no-repeat 10%; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/020-Kleine%20Karekiet.jpg) no-repeat 10%; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Kleine Karekiet</p>
@@ -396,7 +420,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Kleine%20Mantelmeeuw.jpg) no-repeat top; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/093-Kleine\ Mantelmeeuw.jpg) no-repeat top; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Kleine Mantelmeeuw</p>
@@ -404,7 +428,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Kleine%20Zilverreiger.jpg) no-repeat center; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/054-Kleine%20Zilverreiger.jpg) no-repeat center; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Kleine Zilverreiger</p>
@@ -412,7 +436,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Kneu.jpg) no-repeat center; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/029-Kneu.jpg) no-repeat center; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Kneu</p>
@@ -420,7 +444,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Knobbelzwaan.jpg) no-repeat center; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/075-Knobbelzwaan.jpg) no-repeat center; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Knobbelzwaan</p>
@@ -428,7 +452,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Koekoek.jpg) no-repeat center; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/074-Koekoek.jpg) no-repeat center; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Koekoek</p>
@@ -436,7 +460,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Kokardezaagbek.jpg) no-repeat 40%; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/106-Kokardezaagbek.jpg) no-repeat 40%; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Kokardezaagbek</p>
@@ -444,7 +468,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Kokmeeuw.jpg) no-repeat center; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/008-Kokmeeuw.jpg) no-repeat center; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Kokmeeuw</p>
@@ -452,7 +476,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Koolmees.jpg) no-repeat center; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/052-Koolmees.jpg) no-repeat center; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Koolmees</p>
@@ -460,7 +484,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Koperwiek.jpg) no-repeat center; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/041-Koperwiek.jpg) no-repeat center; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Koperwiek</p>
@@ -468,7 +492,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Krakeend.jpg) no-repeat center; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/047-Krakeend.jpg) no-repeat center; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Krakeend</p>
@@ -476,7 +500,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Kuifeend.jpg) no-repeat center; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/018-Kuifeend.jpg) no-repeat center; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Kuifeend</p>
@@ -484,7 +508,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Kuifmees.jpg) no-repeat center; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/016-Kuifmees.jpg) no-repeat center; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Kuifmees</p>
@@ -492,7 +516,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Lachstern.jpg) no-repeat left; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/099-Lachstern.jpg) no-repeat left; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Lachstern</p>
@@ -500,7 +524,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Lepelaar.jpg) no-repeat center; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/076-Lepelaar.jpg) no-repeat center; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Lepelaar</p>
@@ -508,7 +532,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Mandarijneend.jpg) no-repeat left; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/026-Mandarijneend.jpg) no-repeat left; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Mandarijneend</p>
@@ -516,7 +540,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Meerkoet.jpg) no-repeat center; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/072-Meerkoet.jpg) no-repeat center; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Meerkoet</p>
@@ -524,7 +548,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Merel.jpg) no-repeat center; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/067-Merel.jpg) no-repeat center; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Merel</p>
@@ -532,7 +556,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Middelste%20Bonte%20Specht.jpg) no-repeat center; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/015-Middelste%20Bonte%20Specht.jpg) no-repeat center; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Middelste Bonte Specht</p>
@@ -540,7 +564,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Nijlgans.jpg) no-repeat center; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/064-Nijlgans.jpg) no-repeat center; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Nijlgans</p>
@@ -548,7 +572,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Nonnetje.jpg) no-repeat 40%; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/109-Nonnetje.jpg) no-repeat 40%; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Nonnetje</p>
@@ -556,7 +580,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Ooievaar.jpg) no-repeat center; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/010-Ooievaar.jpg) no-repeat center; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Ooievaar</p>
@@ -564,7 +588,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Pimpelmees.jpg) no-repeat 75%; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/011-Pimpelmees.jpg) no-repeat 75%; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Pimpelmees</p>
@@ -572,7 +596,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Poelruiter.jpg) no-repeat center; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/096-Poelruiter.jpg) no-repeat center; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Poelruiter</p>
@@ -580,7 +604,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Purperreiger.jpg) no-repeat center; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/035-Purperreiger.jpg) no-repeat center; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Purperreiger</p>
@@ -588,7 +612,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Putter.jpg) no-repeat 25%; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/033-Putter.jpg) no-repeat 25%; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                         <p class="birdCaption">Putter</p>
@@ -596,7 +620,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Rietgors.jpg) no-repeat center; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/085-Rietgors.jpg) no-repeat center; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                         <p class="birdCaption">Rietgors</p>
@@ -604,7 +628,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Rietzanger.jpg) no-repeat center; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/080-Rietzanger.jpg) no-repeat center; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Rietzanger</p>
@@ -612,7 +636,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Roerdomp.jpg) no-repeat center; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/089-Roerdomp.jpg) no-repeat center; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Roerdomp</p>
@@ -620,7 +644,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Roodborst.jpg) no-repeat 25%; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/002-Roodborst.jpg) no-repeat 25%; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Roodborst</p>
@@ -628,7 +652,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Roodborsttapuit.jpg) no-repeat 10%; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/036-Roodborsttapuit.jpg) no-repeat 10%; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Roodborsttapuit</p>
@@ -636,7 +660,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Rosse%20Grutto.jpg) no-repeat 10%; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/100-Rosse%20Grutto.jpg) no-repeat 10%; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Rosse Grutto</p>
@@ -644,7 +668,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Rotgans.jpg) no-repeat center; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/095-Rotgans.jpg) no-repeat center; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Rotgans</p>
@@ -652,7 +676,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Scholekster.jpg) no-repeat center; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/066-Scholekster.jpg) no-repeat center; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Scholekster</p>
@@ -660,7 +684,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Siberische%20Tjiftjaf.jpg) no-repeat 40%; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/103-Siberische%20Tjiftjaf.jpg) no-repeat 40%; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Sibirische Tjiftjaf</p>
@@ -668,7 +692,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Slechtvalk.jpg) no-repeat 70%; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/004-Slechtvalk.jpg) no-repeat 70%; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Slechtvalk</p>
@@ -676,7 +700,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Slobeend.jpg) no-repeat center; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/050-Slobeend.jpg) no-repeat center; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Slobeend</p>
@@ -684,7 +708,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Smient.jpg) no-repeat center; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/040-Smient.jpg) no-repeat center; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Smient</p>
@@ -692,7 +716,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Soepeend.jpg) no-repeat 70%; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/073-Soepeend.jpg) no-repeat 70%; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Soepeend</p>
@@ -700,7 +724,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Sperwer.jpg) no-repeat center; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/062-Sperwer.jpg) no-repeat center; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Sperwer</p>
@@ -708,7 +732,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Spreeuw.jpg) no-repeat center; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/086-Spreeuw.jpg) no-repeat center; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Spreeuw</p>
@@ -716,7 +740,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Staartmees.jpg) no-repeat top right; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/042-Staartmees.jpg) no-repeat top right; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Staartmees</p>
@@ -724,7 +748,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Stadsduif.jpg) no-repeat center; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/049-Stadsduif.jpg) no-repeat center; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Stadsduif</p>
@@ -732,7 +756,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Tafeleend.jpg) no-repeat 10%; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/110-Tafeleend.jpg) no-repeat 10%; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Tafeleend</p>
@@ -740,7 +764,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Tapuit.jpg) no-repeat top right; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/101-Tapuit.jpg) no-repeat top right; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Tapuit</p>
@@ -748,7 +772,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Tjiftjaf.jpg) no-repeat center; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/005-Tjiftjaf.jpg) no-repeat center; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Tjiftjaf</p>
@@ -756,7 +780,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Torenvalk.jpg) no-repeat center; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/102-Torenvalk.jpg) no-repeat center; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Torenvalk</p>
@@ -764,7 +788,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Tuinfluiter.jpg) no-repeat center; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/021-Tuinfluiter.jpg) no-repeat center; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Tuinfluiter</p>
@@ -772,7 +796,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Veldleeuwerik.jpg) no-repeat center; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/024-Veldleeuwerik.jpg) no-repeat center; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Veldleeuwerik</p>
@@ -780,7 +804,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Vink.jpg) no-repeat 10% 35%; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/014-Vink.jpg) no-repeat 10% 35%; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Vink</p>
@@ -788,7 +812,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Vuurgoudhaan.jpg) no-repeat 70%; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/071-Vuurgoudhaan.jpg) no-repeat 70%; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Vuurgoudhaan</p>
@@ -796,7 +820,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Waterhoen.jpg) no-repeat 10%; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/057-Waterhoen.jpg) no-repeat 10%; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Waterhoen</p>
@@ -804,7 +828,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Wespendief.jpg) no-repeat top; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/083-Wespendief.jpg) no-repeat top; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Wespendief</p>
@@ -812,7 +836,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Wilde%20Eend.jpg) no-repeat 30%; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/056-Wilde%20Eend.jpg) no-repeat 30%; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Wilde Eend</p>
@@ -820,7 +844,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Winterkoning.jpg) no-repeat 30%; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/061-Winterkoning.jpg) no-repeat 30%; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Winterkoning</p>
@@ -828,7 +852,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Wintertaling.jpg) no-repeat center; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/007-Wintertaling.jpg) no-repeat center; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Wintertaling</p>
@@ -836,7 +860,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Witoogeend.jpg) no-repeat 65%; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/108-Witoogeend.jpg) no-repeat 65%; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Witoogeend</p>
@@ -844,7 +868,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Witte%20Kwikstaart.jpg) no-repeat center; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/065-Witte%20Kwikstaart.jpg) no-repeat center; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Witte Kwikstaart</p>
@@ -852,7 +876,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Zanglijster.jpg) no-repeat center; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/068-Zanglijster.jpg) no-repeat center; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Zanglijster</p>
@@ -860,7 +884,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Zeearend.jpg) no-repeat center; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/003-Zeearend.jpg) no-repeat center; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Zeearend</p>
@@ -868,7 +892,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Zilvermeeuw.jpg) no-repeat center; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/028-Zilvermeeuw.jpg) no-repeat center; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Zilvermeeuw</p>
@@ -876,7 +900,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Zwarte%20Kraai.jpg) no-repeat center; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/045-Zwarte%20Kraai.jpg) no-repeat center; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Zwarte Kraai</p>
@@ -884,7 +908,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Zwarte%20Mees.jpg) no-repeat center; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/069-Zwarte%20Mees.jpg) no-repeat center; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Zwarte Mees</p>
@@ -892,7 +916,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Zwarte%20Specht.jpg) no-repeat center; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/053-Zwarte%20Specht.jpg) no-repeat center; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Zwarte Specht</p>
@@ -900,7 +924,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Zwarte%20Stern.jpg) no-repeat center; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/098-Zwarte%20Stern.jpg) no-repeat center; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Zwarte Stern</p>
@@ -908,7 +932,7 @@
                 </div>
             </li>
 
-            <li class="bird" style="background: url(/img/birds/Zwartkop.jpg) no-repeat center; background-size: cover;">
+            <li class="bird" style="background: url(/img/birds/013-Zwartkop.jpg) no-repeat center; background-size: cover;">
                 <div class="birdInfo">
                     <p class="birdNumber"></p>
                     <p class="birdCaption">Zwartkop</p>
