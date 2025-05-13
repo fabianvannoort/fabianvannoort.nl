@@ -14,8 +14,8 @@
         <link rel="preconnect" href="//fonts.googleapis.com">
         <link rel="preconnect" href="//fonts.gstatic.com" crossorigin>
         <link href="//fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&display=swap" rel="stylesheet">
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
                 
                 // Make a list of all elements with class "bird".
                 const birds = document.querySelectorAll(".bird");
@@ -36,8 +36,18 @@
                     let imageURL = getComputedStyle(bird).getPropertyValue('background-image');
                 });
             });
-    </script>
-    
+
+            function sortBirds(sortingKeyToActivate) {
+                const allSortingKeys = document.getElementsByClassName("sortingKey");
+                
+                for(var sortingKeyIterator = 0; sortingKeyIterator < allSortingKeys.length; sortingKeyIterator++){
+                    allSortingKeys[sortingKeyIterator].classList.remove('active');
+                }
+                
+                document.getElementById(sortingKeyToActivate).classList.add("active");
+                console.log("Let the sorting commence... by "+sortingKeyToActivate);
+            }
+        </script>
     </head>
 
     <body>
@@ -50,6 +60,7 @@
         </div>
         <hr />
         <h2>Life list</h2>
+        <p>Sort by:&nbsp;&nbsp;&nbsp;<a class="sortingKey active" id="sortingKey-Naam" onclick="sortBirds(this.id)">🇳🇱Naam</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a class="sortingKey" id="sortingKey-Name" onclick="sortBirds(this.id)">🇬🇧Name</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a class="sortingKey" id="sortingKey-birdNumber" onclick="sortBirds(this.id)">#️⃣Bird number</a></p>
         <ul class="lifeList">
             <li class="bird" style="background: url(/img/birds/025-Aalscholver.jpg) no-repeat 25%; background-size: cover;">
                 <div class="birdInfo">
