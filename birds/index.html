@@ -38,14 +38,59 @@
             });
 
             function sortBirds(sortingKeyToActivate) {
+                setActiveSortingkey(sortingKeyToActivate);
+                
+                switch (sortingKeyToActivate){
+
+                    case "sortingKey-birdNumber":
+                        // Select the lifelist <ul> element that contains all the bird <li> items
+                        var lifeList = document.querySelector('.lifeList');
+
+                        // Select all <li> elements with the class "bird" inside the lifelist
+                        // Convert the NodeList into an array so it may be sorted by sort().
+                        var birds = Array.from(lifeList.querySelectorAll('.bird'));
+
+                        // Define a function to compare two bird elements by their birdNumber value, to reference for sort()
+                        function compareBirdNumbers(a, b) {
+                            var numA = parseInt(a.querySelector('.birdNumber').textContent, 10);
+                            var numB = parseInt(b.querySelector('.birdNumber').textContent, 10);
+                            
+                            // Descending order
+                            return numB - numA; 
+                        }
+
+                        // Sort the birds using the comparison function
+                        birds.sort(compareBirdNumbers);
+
+                        for (const bird of birds){
+                            lifeList.appendChild(bird);
+                        }
+                    break
+
+                    case "sortingKey-naam":
+                        location.reload();
+                        break
+
+                    case "sortingKey-name":
+                        break
+                        
+                    default:
+                        console.log("No sorting cases matched.");
+                        break
+                }
+            }
+
+            function setActiveSortingkey(sortingKeyToActivate){
+                // Collect all elements that are sorting keys
                 const allSortingKeys = document.getElementsByClassName("sortingKey");
                 
+                // Iterate over all sorting keys and remove the "active" class everywhere.
                 for(var sortingKeyIterator = 0; sortingKeyIterator < allSortingKeys.length; sortingKeyIterator++){
                     allSortingKeys[sortingKeyIterator].classList.remove('active');
                 }
                 
+                // Put the appropriate new "active" class in place.
                 document.getElementById(sortingKeyToActivate).classList.add("active");
-                console.log("Let the sorting commence... by "+sortingKeyToActivate);
             }
         </script>
     </head>
@@ -60,7 +105,7 @@
         </div>
         <hr />
         <h2>Life list</h2>
-        <p>Sort by:&nbsp;&nbsp;&nbsp;<a class="sortingKey active" id="sortingKey-Naam" onclick="sortBirds(this.id)">🇳🇱Naam</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a class="sortingKey" id="sortingKey-Name" onclick="sortBirds(this.id)">🇬🇧Name</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a class="sortingKey" id="sortingKey-birdNumber" onclick="sortBirds(this.id)">#️⃣Bird number</a></p>
+        <p>Sort by:&nbsp;&nbsp;&nbsp;<a class="sortingKey active" id="sortingKey-naam" onclick="sortBirds(this.id)">🇳🇱Naam</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a class="sortingKey" id="sortingKey-name" onclick="sortBirds(this.id)">🇬🇧Name</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a class="sortingKey" id="sortingKey-birdNumber" onclick="sortBirds(this.id)">#️⃣Bird number</a></p>
         <ul class="lifeList">
             <li class="bird" style="background: url(/img/birds/025-Aalscholver.jpg) no-repeat 25%; background-size: cover;">
                 <div class="birdInfo">
