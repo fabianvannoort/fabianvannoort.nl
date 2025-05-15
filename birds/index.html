@@ -16,7 +16,10 @@
         <link href="//fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&display=swap" rel="stylesheet">
         <script>
             document.addEventListener("DOMContentLoaded", function () {
-                
+                assignBirdNumbers();
+            });
+            
+            function assignBirdNumbers(){
                 // Make a list of all elements with class "bird".
                 const birds = document.querySelectorAll(".bird");
                 
@@ -35,11 +38,15 @@
                     numberElement.textContent = birdNumber;
                     let imageURL = getComputedStyle(bird).getPropertyValue('background-image');
                 });
-            });
+            };
 
-            function sortBirds(sortingKeyToActivate) {
+            function setBirdSorting(sortingKeyToActivate) {
                 setActiveSortingkey(sortingKeyToActivate);
-                
+                sortBirds(sortingKeyToActivate);
+            }
+
+            function sortBirds(sortingKeyToActivate){
+
                 switch (sortingKeyToActivate){
 
                     case "sortingKey-birdNumber":
@@ -73,11 +80,11 @@
 
                     case "sortingKey-name":
                         break
-                        
+
                     default:
                         console.log("No sorting cases matched.");
                         break
-                }
+                    }
             }
 
             function setActiveSortingkey(sortingKeyToActivate){
@@ -105,7 +112,7 @@
         </div>
         <hr />
         <h2>Life list</h2>
-        <p>Sort by:&nbsp;&nbsp;&nbsp;<a class="sortingKey active" id="sortingKey-naam" onclick="sortBirds(this.id)">🇳🇱Naam</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a class="sortingKey" id="sortingKey-name" onclick="sortBirds(this.id)">🇬🇧Name</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a class="sortingKey" id="sortingKey-birdNumber" onclick="sortBirds(this.id)">#️⃣Bird number</a></p>
+        <p>Sort by:&nbsp;&nbsp;&nbsp;<a class="sortingKey active" id="sortingKey-naam" onclick="setBirdSorting(this.id)">🇳🇱Naam</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a class="sortingKey" id="sortingKey-name" onclick="setBirdSorting(this.id)">🇬🇧Name</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a class="sortingKey" id="sortingKey-birdNumber" onclick="setBirdSorting(this.id)">#️⃣Bird number</a></p>
         <ul class="lifeList">
             <li class="bird" style="background: url(/img/birds/025-Aalscholver.jpg) no-repeat 25%; background-size: cover;">
                 <div class="birdInfo">
