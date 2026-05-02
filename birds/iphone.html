@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="robots" content="noindex">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iPhone Size & Weight Comparison</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            color: white;
+        }
+        
+        h1 {
+            font-size: 2em;
+            margin-bottom: 8px;
+        }
+        
+        .subtitle {
+            font-size: 1em;
+            opacity: 0.9;
+        }
+        
+        .table-wrapper {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 15px 50px rgba(0,0,0,0.25);
+            overflow: auto;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        thead {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            position: sticky;
+            top: 0;
+        }
+        
+        th:first-child {
+            text-align: center;
+        }
+        
+        th:first-child,
+        td:first-child {
+            text-align: center;
+            width: 50px;
+        }
+        
+        th {
+            padding: 14px 10px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.85em;
+            white-space: nowrap;
+            border-right: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        th:last-child {
+            border-right: none;
+        }
+        
+        tbody tr {
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        tbody tr:last-child {
+            border-bottom: none;
+        }
+        
+        td {
+            padding: 12px 10px;
+            font-size: 0.85em;
+            color: #34495e;
+        }
+        
+        .phone-name {
+            font-weight: 600;
+            min-width: 140px;
+            color: #2c3e50;
+        }
+        
+        .reference-row {
+            background-color: #fff3cd;
+            font-weight: 600;
+        }
+        
+        .reference-row td {
+            color: #856404;
+        }
+        
+        .dimension-col {
+            text-align: center;
+            font-variant-numeric: tabular-nums;
+            font-size: 0.8em;
+        }
+        
+        .weight-col {
+            text-align: center;
+            font-weight: 500;
+            min-width: 80px;
+        }
+        
+        .weight-diff {
+            font-size: 0.75em;
+            display: block;
+            color: #7f8c8d;
+            margin-top: 2px;
+        }
+        
+        .plus20 { background-color: #e8f8f5; }
+        .plus40 { background-color: #d5f4e6; }
+        .plus70 { background-color: #fadbd8; }
+        .plus90 { background-color: #f5b7b1; }
+        
+        .plus20 .weight-diff { color: #239b56; }
+        .plus40 .weight-diff { color: #1e8449; }
+        .plus70 .weight-diff { color: #c0392b; }
+        .plus90 .weight-diff { color: #a93226; }
+        
+        .screen-col {
+            text-align: center;
+            font-weight: 500;
+        }
+        
+        .year {
+            font-size: 0.8em;
+            color: #7f8c8d;
+            display: block;
+            margin-top: 2px;
+        }
+        
+        @media (max-width: 1200px) {
+            th, td {
+                padding: 10px 8px;
+                font-size: 0.8em;
+            }
+            
+            .dimension-col {
+                font-size: 0.75em;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 0;
+            }
+            
+            th, td {
+                padding: 8px 6px;
+                font-size: 0.75em;
+            }
+            
+            h1 {
+                font-size: 1.4em;
+            }
+        }
+        
+        .legend {
+            background: white;
+            margin-top: 20px;
+            padding: 16px;
+            border-radius: 12px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.9em;
+        }
+        
+        .legend-box {
+            width: 20px;
+            height: 20px;
+            border-radius: 3px;
+            flex-shrink: 0;
+        }
+        
+        .info-text {
+            background: white;
+            margin-top: 20px;
+            padding: 16px;
+            border-radius: 12px;
+            font-size: 0.9em;
+            color: #34495e;
+            line-height: 1.6;
+        }
+        
+        .info-text strong {
+            color: #2c3e50;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📱 Complete iPhone Lineup: All Models Since iPhone 13 mini</h1>
+            <p class="subtitle">Size, weight, and weight difference from 141g baseline (iPhone 13 mini)</p>
+        </div>
+        
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Candidate</th>
+                        <th>Model</th>
+                        <th class="screen-col">Screen</th>
+                        <th class="dimension-col">Height<br>(mm)</th>
+                        <th class="dimension-col">Width<br>(mm)</th>
+                        <th class="dimension-col">Depth<br>(mm)</th>
+                        <th class="weight-col">Weight (g)<br>+Diff from 13m</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- 2021 Baseline -->
+                    <tr class="reference-row">
+                        <td></td>
+                        <td class="phone-name">iPhone 13 mini <span class="year">Sep 2021</span></td>
+                        <td class="screen-col">5.4"</td>
+                        <td class="dimension-col">131.5<span class="weight-diff">BASELINE</span></td>
+                        <td class="dimension-col">64.2<span class="weight-diff">BASELINE</span></td>
+                        <td class="dimension-col">7.65<span class="weight-diff">BASELINE</span></td>
+                        <td class="weight-col">141<span class="weight-diff">BASELINE</span></td>
+                    </tr>
+                    
+                    
+                    <tr class="plus70">
+                        <td></td>
+                        <td class="phone-name">iPhone 13 Pro <span class="year">Sep 2021</span></td>
+                        <td class="screen-col">6.1"</td>
+                        <td class="dimension-col">146.7<span class="weight-diff">+15.2</span></td>
+                        <td class="dimension-col">71.5<span class="weight-diff">+7.3</span></td>
+                        <td class="dimension-col">7.65<span class="weight-diff">±0</span></td>
+                        <td class="weight-col">204<span class="weight-diff">+63g</span></td>
+                    </tr>
+                    
+                    <tr class="plus90">
+                        <td></td>
+                        <td class="phone-name">iPhone 13 Pro Max <span class="year">Sep 2021</span></td>
+                        <td class="screen-col">6.7"</td>
+                        <td class="dimension-col">160.8<span class="weight-diff">+29.3</span></td>
+                        <td class="dimension-col">78.1<span class="weight-diff">+13.9</span></td>
+                        <td class="dimension-col">7.65<span class="weight-diff">±0</span></td>
+                        <td class="weight-col">240<span class="weight-diff">+99g</span></td>
+                    </tr>
+                    
+                    
+                    <tr class="plus20">
+                        <td></td>
+                        <td class="phone-name">iPhone 14 <span class="year">Sep 2022</span></td>
+                        <td class="screen-col">6.1"</td>
+                        <td class="dimension-col">146.7<span class="weight-diff">+15.2</span></td>
+                        <td class="dimension-col">71.5<span class="weight-diff">+7.3</span></td>
+                        <td class="dimension-col">7.8<span class="weight-diff">+0.15</span></td>
+                        <td class="weight-col">172<span class="weight-diff">+31g</span></td>
+                    </tr>
+                    
+                    <tr class="plus70">
+                        <td></td>
+                        <td class="phone-name">iPhone 14 Plus <span class="year">Oct 2022</span></td>
+                        <td class="screen-col">6.7"</td>
+                        <td class="dimension-col">160.8<span class="weight-diff">+29.3</span></td>
+                        <td class="dimension-col">78.1<span class="weight-diff">+13.9</span></td>
+                        <td class="dimension-col">7.8<span class="weight-diff">+0.15</span></td>
+                        <td class="weight-col">203<span class="weight-diff">+62g</span></td>
+                    </tr>
+                    
+                    
+                    <tr class="plus70">
+                        <td></td>
+                        <td class="phone-name">iPhone 14 Pro <span class="year">Sep 2022</span></td>
+                        <td class="screen-col">6.1"</td>
+                        <td class="dimension-col">147.5<span class="weight-diff">+16</span></td>
+                        <td class="dimension-col">71.5<span class="weight-diff">+7.3</span></td>
+                        <td class="dimension-col">7.85<span class="weight-diff">+0.2</span></td>
+                        <td class="weight-col">206<span class="weight-diff">+65g</span></td>
+                    </tr>
+                    
+                    <tr class="plus90">
+                        <td></td>
+                        <td class="phone-name">iPhone 14 Pro Max <span class="year">Sep 2022</span></td>
+                        <td class="screen-col">6.7"</td>
+                        <td class="dimension-col">160.8<span class="weight-diff">+29.3</span></td>
+                        <td class="dimension-col">78.1<span class="weight-diff">+13.9</span></td>
+                        <td class="dimension-col">7.85<span class="weight-diff">+0.2</span></td>
+                        <td class="weight-col">240<span class="weight-diff">+99g</span></td>
+                    </tr>
+                    
+                    
+                    <tr class="plus20">
+                        <td></td>
+                        <td class="phone-name">iPhone 15 <span class="year">Sep 2023</span></td>
+                        <td class="screen-col">6.1"</td>
+                        <td class="dimension-col">147.6<span class="weight-diff">+16.1</span></td>
+                        <td class="dimension-col">71.6<span class="weight-diff">+7.4</span></td>
+                        <td class="dimension-col">7.8<span class="weight-diff">+0.15</span></td>
+                        <td class="weight-col">171<span class="weight-diff">+30g</span></td>
+                    </tr>
+                    
+                    <tr class="plus70">
+                        <td></td>
+                        <td class="phone-name">iPhone 15 Plus <span class="year">Oct 2023</span></td>
+                        <td class="screen-col">6.7"</td>
+                        <td class="dimension-col">160.9<span class="weight-diff">+29.4</span></td>
+                        <td class="dimension-col">77.8<span class="weight-diff">+13.6</span></td>
+                        <td class="dimension-col">7.8<span class="weight-diff">+0.15</span></td>
+                        <td class="weight-col">201<span class="weight-diff">+60g</span></td>
+                    </tr>
+                    
+                    
+                    <tr class="plus40">
+                        <td>⭐️</td>
+                        <td class="phone-name">iPhone 15 Pro <span class="year">Sep 2023</span></td>
+                        <td class="screen-col">6.1"</td>
+                        <td class="dimension-col">146.6<span class="weight-diff">+15.1</span></td>
+                        <td class="dimension-col">70.6<span class="weight-diff">+6.4</span></td>
+                        <td class="dimension-col">8.25<span class="weight-diff">+0.6</span></td>
+                        <td class="weight-col">187<span class="weight-diff">+46g</span></td>
+                    </tr>
+                    
+                    <tr class="plus70">
+                        <td></td>
+                        <td class="phone-name">iPhone 15 Pro Max <span class="year">Sep 2023</span></td>
+                        <td class="screen-col">6.7"</td>
+                        <td class="dimension-col">159.9<span class="weight-diff">+28.4</span></td>
+                        <td class="dimension-col">76.7<span class="weight-diff">+12.5</span></td>
+                        <td class="dimension-col">8.25<span class="weight-diff">+0.6</span></td>
+                        <td class="weight-col">221<span class="weight-diff">+80g</span></td>
+                    </tr>
+                    
+                    
+                    <tr class="plus20">
+                        <td>⭐️</td>
+                        <td class="phone-name">iPhone 16 <span class="year">Sep 2024</span></td>
+                        <td class="screen-col">6.1"</td>
+                        <td class="dimension-col">147.6<span class="weight-diff">+16.1</span></td>
+                        <td class="dimension-col">71.6<span class="weight-diff">+7.4</span></td>
+                        <td class="dimension-col">7.8<span class="weight-diff">+0.15</span></td>
+                        <td class="weight-col">170<span class="weight-diff">+29g</span></td>
+                    </tr>
+                    
+                    <tr class="plus70">
+                        <td></td>
+                        <td class="phone-name">iPhone 16 Plus <span class="year">Sep 2024</span></td>
+                        <td class="screen-col">6.7"</td>
+                        <td class="dimension-col">160.9<span class="weight-diff">+29.4</span></td>
+                        <td class="dimension-col">77.8<span class="weight-diff">+13.6</span></td>
+                        <td class="dimension-col">7.8<span class="weight-diff">+0.15</span></td>
+                        <td class="weight-col">199<span class="weight-diff">+58g</span></td>
+                    </tr>
+                    
+                    <tr class="plus20">
+                        <td>⭐️</td>
+                        <td class="phone-name">iPhone 16e <span class="year">Nov 2024</span></td>
+                        <td class="screen-col">6.1"</td>
+                        <td class="dimension-col">146.7<span class="weight-diff">+15.2</span></td>
+                        <td class="dimension-col">71.5<span class="weight-diff">+7.3</span></td>
+                        <td class="dimension-col">7.8<span class="weight-diff">+0.15</span></td>
+                        <td class="weight-col">167<span class="weight-diff">+26g</span></td>
+                    </tr>
+                    
+                    
+                    <tr class="plus70">
+                        <td></td>
+                        <td class="phone-name">iPhone 16 Pro <span class="year">Sep 2024</span></td>
+                        <td class="screen-col">6.3"</td>
+                        <td class="dimension-col">149.6<span class="weight-diff">+18.1</span></td>
+                        <td class="dimension-col">71.5<span class="weight-diff">+7.3</span></td>
+                        <td class="dimension-col">8.25<span class="weight-diff">+0.6</span></td>
+                        <td class="weight-col">199<span class="weight-diff">+58g</span></td>
+                    </tr>
+                    
+                    <tr class="plus90">
+                        <td></td>
+                        <td class="phone-name">iPhone 16 Pro Max <span class="year">Sep 2024</span></td>
+                        <td class="screen-col">6.9"</td>
+                        <td class="dimension-col">163<span class="weight-diff">+31.5</span></td>
+                        <td class="dimension-col">77.6<span class="weight-diff">+13.4</span></td>
+                        <td class="dimension-col">8.25<span class="weight-diff">+0.6</span></td>
+                        <td class="weight-col">227<span class="weight-diff">+86g</span></td>
+                    </tr>
+                    
+                    
+                    <tr class="plus20">
+                        <td>⭐️</td>
+                        <td class="phone-name">iPhone 17e <span class="year">Mar 2026</span></td>
+                        <td class="screen-col">6.1"</td>
+                        <td class="dimension-col">146.7<span class="weight-diff">+15.2</span></td>
+                        <td class="dimension-col">71.5<span class="weight-diff">+7.3</span></td>
+                        <td class="dimension-col">7.8<span class="weight-diff">+0.15</span></td>
+                        <td class="weight-col">167<span class="weight-diff">+26g</span></td>
+                    </tr>
+                    
+                    <tr class="plus40">
+                        <td></td>
+                        <td class="phone-name">iPhone 17 <span class="year">Sep 2025</span></td>
+                        <td class="screen-col">6.3"</td>
+                        <td class="dimension-col">149.6<span class="weight-diff">+18.1</span></td>
+                        <td class="dimension-col">71.5<span class="weight-diff">+7.3</span></td>
+                        <td class="dimension-col">7.95<span class="weight-diff">+0.3</span></td>
+                        <td class="weight-col">177<span class="weight-diff">+36g</span></td>
+                    </tr>
+                    
+                    <tr class="plus20">
+                        <td>⭐️</td>
+                        <td class="phone-name">iPhone Air <span class="year">Sep 2025</span></td>
+                        <td class="screen-col">6.5"</td>
+                        <td class="dimension-col">156.2<span class="weight-diff">+24.7</span></td>
+                        <td class="dimension-col">74.7<span class="weight-diff">+10.5</span></td>
+                        <td class="dimension-col">5.6<span class="weight-diff">−2.05</span></td>
+                        <td class="weight-col">165<span class="weight-diff">+24g</span></td>
+                    </tr>
+                    
+                    
+                    <tr class="plus70">
+                        <td></td>
+                        <td class="phone-name">iPhone 17 Pro <span class="year">Sep 2025</span></td>
+                        <td class="screen-col">6.3"</td>
+                        <td class="dimension-col">150<span class="weight-diff">+18.5</span></td>
+                        <td class="dimension-col">71.9<span class="weight-diff">+7.7</span></td>
+                        <td class="dimension-col">8.75<span class="weight-diff">+1.1</span></td>
+                        <td class="weight-col">206<span class="weight-diff">+65g</span></td>
+                    </tr>
+                    
+                    <tr class="plus90">
+                        <td></td>
+                        <td class="phone-name">iPhone 17 Pro Max <span class="year">Sep 2025</span></td>
+                        <td class="screen-col">6.9"</td>
+                        <td class="dimension-col">163.4<span class="weight-diff">+31.9</span></td>
+                        <td class="dimension-col">78<span class="weight-diff">+13.8</span></td>
+                        <td class="dimension-col">8.75<span class="weight-diff">+1.1</span></td>
+                        <td class="weight-col">233<span class="weight-diff">+92g</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-box" style="background: #fff3cd; border: 2px solid #f39c12;"></div>
+                <span><strong>141g baseline:</strong> iPhone 13 mini</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-box" style="background: #e8f8f5;"></div>
+                <span><strong>+20–40g:</strong> Minimal weight gain</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-box" style="background: #d5f4e6;"></div>
+                <span><strong>+40–70g:</strong> Moderate weight gain</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-box" style="background: #fadbd8;"></div>
+                <span><strong>+70g+:</strong> Significant weight gain</span>
+            </div>
+        </div>
+        
+        <div class="info-text">
+            <strong>Key Insights:</strong><br>
+            • <strong>Lightest:</strong> iPhone 13 mini (141g) and iPhone Air (165g) — only 24g heavier despite 6.5" screen due to extreme 5.6mm thinness<br>
+            • <strong>Most compact standard phone:</strong> iPhone 16e/17e (167g) — only 26g more than baseline<br>
+            • <strong>Weight creep on Pro models:</strong> Pro models have consistently gained 60-70g over the baseline; Pro Max adds another 30g<br>
+            • <strong>No mini since 2021:</strong> Apple discontinued the mini line after iPhone 13 mini; iPhone Air replaced it as the premium compact alternative<br>
+            • <strong>Heaviest ever:</strong> iPhone 13/14 Pro Max at 240g (heavier than some entry-level Android tablets)
+        </div>
+    </div>
+</body>
+</html>
