@@ -61,6 +61,10 @@ p.birdNumber {
     /* font-style: normal; */
 }
 
+a.sortingKey {
+    cursor: pointer;
+}
+
 a.sortingKey.active {
   font-weight: 600;  
 }
