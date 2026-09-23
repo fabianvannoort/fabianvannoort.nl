@@ -32,6 +32,10 @@ h1 {
     max-width: 10em;
 }
 
+h1.top_name {
+    margin: 0.1em 0 0 0;
+}
+
 h2 {
     font-size: 2em;
     margin: 1.2em 0 0 0;
